@@ -1,0 +1,17 @@
+{
+    "name": "faaren-tech/webhook-receiver",
+    "description": "Build to receive webhooks.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "FaarenTech\\WebhookReceiver\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fabian Hagen",
+            "email": "fabian@faaren.com"
+        }
+    ],
+    "require": {}
+}
