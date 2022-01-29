@@ -13,5 +13,14 @@
             "email": "fabian@faaren.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "license": "MIT",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FaarenTech\\WebhookReceiver\\WebhookReceiverServiceProvider"
+            ],
+            "aliases": {}
+        }
+    }
 }
