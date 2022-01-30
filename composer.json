@@ -4,7 +4,9 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "FaarenTech\\WebhookReceiver\\": "src/"
+            "FaarenTech\\WebhookReceiver\\": "src/",
+            "FaarenTech\\WebhookReceiver\\Database\\Factories\\": "database/factories/",
+            "FaarenTech\\WebhookReceiver\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -13,7 +15,6 @@
             "email": "fabian@faaren.com"
         }
     ],
-    "require": {},
     "license": "MIT",
     "extra": {
         "laravel": {
@@ -22,5 +23,11 @@
             ],
             "aliases": {}
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-f": "vendor/bin/phpunit --filter"
+    },
+    "require-dev": {
     }
 }
