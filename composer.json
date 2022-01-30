@@ -28,6 +28,7 @@
         "test": "vendor/bin/phpunit",
         "test-f": "vendor/bin/phpunit --filter"
     },
-    "require-dev": {
+    "require": {
+        "phpunit/phpunit": "^9.5"
     }
 }
