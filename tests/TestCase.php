@@ -2,9 +2,26 @@
 
 namespace FaarenTech\WebhookReceiver\Tests;
 
-use PHPUnit\Framework\TestCase as BaseTest;
+use FaarenTech\WebhookReceiver\WebhookReceiverServiceProvider;
+use Tests\CreatesApplication;
 
-class TestCase extends BaseTest
+class TestCase extends \Orchestra\Testbench\TestCase
 {
+    public function setUp(): void
+    {
+        parent::setUp();
+    }
+
+    public function getPackageProviders($app)
+    {
+        return [
+            WebhookReceiverServiceProvider::class
+        ];
+    }
+
+    public function getEnvironmentSetUp($app)
+    {
+
+    }
 
 }
