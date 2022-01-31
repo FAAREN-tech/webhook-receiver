@@ -13,6 +13,10 @@ return [
 
     /**
      * Here you can register different endpoints
+     * Key is the specific endpoint
+     * Value is an instance of WebhookEndpointHandlerInterface
      */
-    'endpoints' => []
+    'endpoints' => [
+        'example-endpoint' => \FaarenTech\WebhookReceiver\Http\WebhookEndpoints\ExampleEndpointHandler::class
+    ]
 ];

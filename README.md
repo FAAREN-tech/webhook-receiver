@@ -12,7 +12,7 @@ php artisan vendor:publish --provider="FaarenTech\WebhookReceiver\WebhookReceive
 ```
 
 ## Creating new endpoints
-Create a new class ExampleWebhookHandler.php within a directory of your choice (e.g. `app/WebhookEndpoints/` ). This class must implement the 
+Create a new class ExampleWebhookHandler.php within a directory of your choice (e.g. `app/Http/WebhookEndpoints/` ). This class must implement the 
 
 ## Testing
 

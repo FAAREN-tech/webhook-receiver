@@ -1,0 +1,26 @@
+POST http://localhost/webhook-endpoints/example-endpoint
+Content-Type: application/json
+
+{
+    "event": "foo.bar",
+    "payload": {
+        "items": [
+            {
+                "id": 3,
+                "amount": 455,
+                "title": "Item Nr. 3"
+            }, {
+                "id": 76,
+                "amount": 545,
+                "title": "Item Nr. 76"
+            }
+        ],
+        "total": 1000,
+        "currency": "EUR",
+        "customer": {
+            "email": "fred@example.com"
+        }
+    }
+}
+
+###

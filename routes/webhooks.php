@@ -6,3 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::match(['POST', 'GET'],'/{endpoint}', [
     WebhookEndpointController::class, 'handleWebhookRequest'
 ]);
+
+Route::get('/', function() {
+    echo "Hallo";
+});
