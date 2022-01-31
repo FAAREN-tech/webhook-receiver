@@ -12,6 +12,10 @@ class Webhook extends Model
 
     protected $guarded = ['id'];
 
+    protected $casts = [
+        'payload' => 'object'
+    ];
+
     protected static function newFactory()
     {
         return WebhookFactory::new();

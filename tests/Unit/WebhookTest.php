@@ -4,17 +4,25 @@ namespace FaarenTech\WebhookReceiver\Tests\Unit;
 
 use FaarenTech\WebhookReceiver\Models\Webhook;
 use FaarenTech\WebhookReceiver\Tests\TestCase;
+use Illuminate\Database\Eloquent\Model;
 
 class WebhookTest extends TestCase
 {
-    public function test_webhook_has_event_name()
+    protected Model $webhook;
+
+    public function setUp(): void
     {
-        $webhook = Webhook::factory()->create(['event' => 'example.event']);
-        $this->assertEquals("example.event", $webhook->event);
+        parent::setUp();
+        $this->webhook = Webhook::factory()->create();
     }
 
-    public function test_case()
+    public function test_webhook_has_event_name()
     {
-        $this->assertTrue(true);
+        $this->assertNotNull($this->webhook->event);
+    }
+
+    public function test_webhook_has_payload()
+    {
+        $this->assertNotNull($this->webhook->payload);
     }
 }

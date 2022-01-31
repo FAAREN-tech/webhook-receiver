@@ -21,7 +21,9 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
     public function getEnvironmentSetUp($app)
     {
+        include_once __DIR__ . "/../database/migrations/2022_01_29_213456_create_webhooks_table.php";
 
+        (new \CreateWebhooksTable)->up();
     }
 
 }
