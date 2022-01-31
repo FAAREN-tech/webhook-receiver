@@ -9,6 +9,7 @@
 
 This package will be used by all FAAREN Services which receive webhooks. It provides a basic structure to handle incoming webhooks.
 With this package you can simply define new endpoints for webhooks. Those webhooks will be stored within a database. Via a simple HandlerInterface you can define custom handlers for each of your endpoints.  
+This package also offers a basic CRUD functionality to interact with your stored webhooks via the `Webhook` model.
 
 ## Installation
 
@@ -47,6 +48,13 @@ return [
     ]
 ];
 ```
+
+## Examples
+
+If you want you can take a look at the following files:
+
+- [Example requests](example-requests.rest): Some simple examples. Can be executed directly from your favorite IDE (PhpStorm ;-))
+- [ExampleHandler](src/Http/WebhookEndpoints/ExampleEndpointHandler.php): a example implementation 
 
 ## Testing
 
