@@ -25,12 +25,12 @@ class ExampleEndpointHandler implements WebhookEndpointHandlerInterface
     public function getEventName(): string
     {
         // Returns the relevant event name from the webhook request
-        return $this->request->get('event');
+        return (string) $this->request->get('event');
     }
 
     public function getPayload(): \stdClass
     {
         // Returns the relevant payload from the webhook request
-        return $this->request->get('payload');
+        return (object) $this->request->get('payload');
     }
 }
