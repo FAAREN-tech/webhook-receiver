@@ -1,3 +1,19 @@
+# Get all entries
+GET http://localhost/webhook-endpoints/crud/1
+Accept: application/json
+
+###
+
+# Get one entry
+GET http://localhost/webhook-endpoints/crud/1
+Accept: application/json
+
+###
+# Delete one entry
+DELETE http://localhost/webhook-endpoints/crud/1
+Accept: application/json
+
+###
 POST http://localhost/webhook-endpoints/example-endpoint
 Content-Type: application/json
 
