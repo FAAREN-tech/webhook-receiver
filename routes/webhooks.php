@@ -3,6 +3,6 @@
 use \FaarenTech\WebhookReceiver\Http\Controllers\WebhookEndpointController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/{endpoint}', [
+Route::match(['POST', 'GET'],'/{endpoint}', [
     WebhookEndpointController::class, 'handleWebhookRequest'
 ]);
