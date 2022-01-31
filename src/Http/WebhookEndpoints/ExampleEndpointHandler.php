@@ -19,7 +19,7 @@ class ExampleEndpointHandler implements WebhookEndpointHandlerInterface
     public function handle(Webhook $webhook): void
     {
         // Here you can trigger a job or any other action you want
-        dd("Webhook handled", $webhook);
+        echo("Webhook handled");
     }
 
     public function getEventName(): string

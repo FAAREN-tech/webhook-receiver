@@ -28,7 +28,8 @@ class WebhookReceiverServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadMigrationsFrom(__DIR__ . "/../database/migrations");
-        $this->registerRoutes();
+        $this->registerEndpointRoute();
+        $this->registerCrudRoutes();
 
         if($this->app->runningInConsole()) {
             $this->publishes([
@@ -37,14 +38,25 @@ class WebhookReceiverServiceProvider extends ServiceProvider
         }
     }
 
-    protected function registerRoutes()
+    protected function registerEndpointRoute()
     {
         $routeConfig = [
             'prefix' => config('webhook_receiver.prefix'),
             'middleware' => config('webhook_receiver.middleware')
         ];
         Route::group($routeConfig, function() {
-            $this->loadRoutesFrom(__DIR__ . "/../routes/webhooks.php");
+            $this->loadRoutesFrom(__DIR__ . "/../routes/endpoints.php");
+        });
+    }
+
+    protected function registerCrudRoutes()
+    {
+        $routeConfig = [
+            'prefix' => config('webhook_receiver.crud_prefix'),
+            'middleware' => config('webhook_receiver.crud_middleware')
+        ];
+        Route::group($routeConfig, function() {
+            $this->loadRoutesFrom(__DIR__ . "/../routes/crud.php");
         });
     }
 }
