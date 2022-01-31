@@ -11,6 +11,9 @@ Publish the relevant configuration file via:
 php artisan vendor:publish --provider="FaarenTech\WebhookReceiver\WebhookReceiverPackageServiceProvider" --tag="config"
 ```
 
+## Creating new endpoints
+Create a new class ExampleWebhookHandler.php within a directory of your choice (e.g. `app/WebhookEndpoints/` ). This class must implement the 
+
 ## Testing
 
 Add the relevant testsuite to your main phpunit.xml:

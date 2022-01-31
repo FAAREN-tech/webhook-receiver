@@ -17,6 +17,7 @@ class CreateWebhooksTable extends Migration
             $table->id();
             $table->string('event');
             $table->json('payload');
+            $table->dateTime('handled_at')->nullable();
             $table->timestamps();
         });
     }

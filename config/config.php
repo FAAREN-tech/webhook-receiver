@@ -11,5 +11,8 @@ return [
      */
     'middleware' => [],
 
+    /**
+     * Here you can register different endpoints
+     */
     'endpoints' => []
 ];
