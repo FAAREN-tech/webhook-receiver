@@ -43,9 +43,7 @@ class WebhookReceiverServiceProvider extends ServiceProvider
             'prefix' => config('webhook_receiver.prefix'),
             'middleware' => config('webhook_receiver.middleware')
         ];
-        Route::group([
-            'prefix'
-        ], function() {
+        Route::group($routeConfig, function() {
             $this->loadRoutesFrom(__DIR__ . "/../routes/webhooks.php");
         });
     }
