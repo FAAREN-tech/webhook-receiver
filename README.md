@@ -49,7 +49,7 @@ return [
 ];
 ```
 
-## Examples
+## Example files
 
 If you want you can take a look at the following files:
 
