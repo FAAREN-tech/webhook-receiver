@@ -53,7 +53,7 @@ return [
 
 If you want you can take a look at the following files:
 
-- [Example requests](example-requests.rest): Some simple examples. Can be executed directly from your favorite IDE (PhpStorm ;-))
+- [ExampleRequests](example-requests.rest): Some simple examples. Can be executed directly from your favorite IDE (PhpStorm ;-))
 - [ExampleHandler](src/Http/WebhookEndpoints/ExampleEndpointHandler.php): a example implementation 
 
 ## Testing
